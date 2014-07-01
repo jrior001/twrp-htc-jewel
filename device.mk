@@ -14,6 +14,11 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/lpm.rc:recovery/root/lpm.rc \
     $(LOCAL_PATH)/recovery/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
